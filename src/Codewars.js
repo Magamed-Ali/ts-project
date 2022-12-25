@@ -8,22 +8,21 @@ function Codewars(props) {
 
     function deleteNth(arr, n) {
 
-        const array = [];
+        let arr3 = []
+
         for (let i = 0; i < arr.length; i++) {
 
-             let value = arr.filter(item => item ==  array[i]).length;
+            let aa = arr3.filter(item => item == arr[i]).length;
 
-            console.log("sss", value);
-
-            if (value < n) {
-                array.push(arr[i]);
-
+            if (aa < n) {
+                arr3.push(arr[i])
             }
 
         }
-        console.log(array)
 
-        }
+        return console.log(arr3)
+
+    }
 
 
     deleteNth([4, 1, 2, 3, 1, 2, 1, 2, 3, 2], 2);
