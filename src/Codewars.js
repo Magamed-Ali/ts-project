@@ -12,11 +12,19 @@ function Codewars(props) {
             newArr = iterable.split('')
         }
 
-        console.log("ddd", newArr);
 
+        let arr = [];
+        for (let i = 0; i < newArr.length; i++) {
+            console.log(i)
+            if (newArr[i] != newArr[i + 1]) {
+                arr.push(newArr[i])
+            }
+        }
+        return arr
     }
 
     uniqueInOrder('AAAABBBCCDAABBB')
+    uniqueInOrder([1,2,2,3,3])
     return (
 
 
