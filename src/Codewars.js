@@ -3,28 +3,28 @@ import React from 'react';
 function Codewars(props) {
 
 
-    let uniqueInOrder = function (iterable) {
+    function scramble(str1, str2) {
 
-        let newArr;
-        if (Array.isArray(iterable)) {
-            newArr = iterable
-        } else {
-            newArr = iterable.split('')
-        }
+        const arr1 = str1.split('');
+        const arr2 = str2.split('');
 
+        const newArr = [];
 
-        let arr = [];
-        for (let i = 0; i < newArr.length; i++) {
-            console.log(i)
-            if (newArr[i] != newArr[i + 1]) {
-                arr.push(newArr[i])
+        for(let i = 0; i < arr2.length; i ++){
+            if(arr2[i] == arr1.filter(item => item)){
+                newArr.push(arr2[i]);
+                console.log([3,4,5,3].splice(1))
             }
+
         }
-        return arr
+
+        console.log(arr1);
+        console.log(arr2);
+        console.log("sdaf", newArr)
     }
 
-    uniqueInOrder('AAAABBBCCDAABBB')
-    uniqueInOrder([1,2,2,3,3])
+    scramble('katas', 'steak')
+
     return (
 
 
